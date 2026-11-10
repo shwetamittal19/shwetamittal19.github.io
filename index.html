@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shweta Mittal · Product Manager</title>
+  <meta name="description" content="Shweta Mittal: product manager who sees the customer from every angle. Engineer turned PM, Duke MEM '27. Case studies in product, strategy, marketing, analytics and AI.">
+  <meta property="og:title" content="Shweta Mittal · Product Manager">
+  <meta property="og:description" content="Engineer turned product manager. Case studies in product, strategy, marketing, analytics and AI, each with the real deck.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://shwetamittal19.github.io/img/profile.jpg">
+  <meta property="og:url" content="https://shwetamittal19.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#home"><img id="brand-photo" alt="" width="34" height="34"><span>Shweta Mittal</span></a>
+    <nav aria-label="Sections">
+      <a href="#journey">Journey</a>
+      <a href="#work">Work</a>
+      <a href="#beyond">Beyond work</a>
+    </nav>
+    <a class="btn small primary" href="#contact">Contact</a>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero wrap">
+      <div class="hero-copy">
+        <p class="hello">Hi, I’m Shweta <span aria-hidden="true">👋</span></p>
+        <h1>A product manager who sees the customer from <span class="hl">every angle</span>.</h1>
+        <p class="lede">
+          I started as a software engineer, building security features used by 20 million people.
+          Since then I have interviewed customers, planned strategy, pitched marketing, modeled decisions and built AI agents.
+          I am finishing my Master’s in Engineering Management at Duke.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#work">See my work</a>
+          <a class="btn" id="hero-email">Email me</a>
+          <a class="btn" id="hero-linkedin" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="hero-art" id="hero-art">
+        <div class="blob" aria-hidden="true"></div>
+        <img class="portrait" id="portrait" alt="Shweta Mittal" width="320" height="320">
+      </div>
+    </section>
+
+    <!-- Impact numbers -->
+    <section class="wrap">
+      <div class="impact" id="impact"></div>
+    </section>
+
+    <!-- Journey -->
+    <section id="journey" class="wrap section">
+      <div class="head-row">
+        <div>
+          <h2>My journey</h2>
+          <p class="sub">Tap a stop, use the arrows, or play it through.</p>
+        </div>
+        <button class="btn small" id="journey-play" type="button" aria-pressed="false">▶ Play my journey</button>
+      </div>
+      <div class="stops" id="stops" role="tablist" aria-label="Journey"></div>
+      <article class="stop-card" id="stop-card" aria-live="polite"></article>
+    </section>
+
+    <!-- Mission -->
+    <section id="mission" class="wrap section mission" aria-label="My personal mission">
+      <figure class="mission-hero reveal">
+        <img id="mission-photo" alt="" loading="lazy">
+        <figcaption>
+          <p class="eyebrow" id="mission-label"></p>
+          <blockquote id="mission-quote"></blockquote>
+        </figcaption>
+      </figure>
+      <div class="trail" id="trail"></div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="band">
+      <div class="wrap section">
+        <h2>My work</h2>
+        <p class="sub">Pick an area. Every card opens the real deck or report.</p>
+        <div class="tabs" id="tabs" role="tablist" aria-label="Areas of work"></div>
+        <p class="area-line" id="area-line"></p>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <!-- Toolbox -->
+    <section class="wrap section slim">
+      <h2>Toolbox</h2>
+      <div class="skills" id="skills"></div>
+    </section>
+
+    <!-- Beyond work -->
+    <section id="beyond" class="wrap section">
+      <h2>Beyond work</h2>
+      <p class="sub" id="life-line"></p>
+      <div class="mosaic" id="mosaic"></div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="wrap">
+      <div class="contact">
+        <h2>Let’s talk product.</h2>
+        <p>I am looking for product management roles. Email is the fastest way to reach me.</p>
+        <div class="cta center" id="contact-links"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <span>© <span id="year"></span> Shweta Mittal</span>
+    <span>Team projects are shown as submitted and credit every teammate inside the file.</span>
+  </footer>
+
+  <!-- Case study viewer -->
+  <dialog id="modal" aria-labelledby="m-title">
+    <div class="modal-inner">
+      <div class="m-bar">
+        <button class="round" id="m-prev" type="button" aria-label="Previous case">←</button>
+        <span id="m-count"></span>
+        <button class="round" id="m-next" type="button" aria-label="Next case">→</button>
+        <button class="round close" id="m-close" type="button" aria-label="Close">✕</button>
+      </div>
+      <div class="m-body" id="m-body">
+        <div class="m-text" id="m-text">
+          <span class="tag" id="m-tag"></span>
+          <h3 id="m-title"></h3>
+          <p class="m-org" id="m-org"></p>
+          <p class="m-summary" id="m-summary"></p>
+          <h4 id="m-points-h">What I did</h4>
+          <ul id="m-points"></ul>
+          <p class="m-outcome" id="m-outcome"></p>
+          <div class="m-links" id="m-links"></div>
+        </div>
+        <div class="m-viewer" id="m-viewer">
+          <div class="m-tabs" id="m-tabs" role="tablist" aria-label="Files"></div>
+          <div class="m-frame" id="m-frame"></div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/data.js"></script>
+  <script src="js/covers.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
