@@ -55,11 +55,12 @@
   });
 
   /* ───────── Impact numbers ───────── */
-  const statColors = ["#5B3DF5", "#EC4899", "#FF6B4A", "#10B981"];
+  const statColors = ["#5B3DF5", "#EC4899", "#FF6B4A", "#10B981", "#3B82F6"];
   IMPACT.forEach((s, i) => {
-    const b = el("b", { text: (s.prefix || "") + s.n + (s.suffix || "") });
-    b.dataset.n = s.n; b.dataset.prefix = s.prefix || ""; b.dataset.suffix = s.suffix || "";
-    $("impact").append(el("div", { class: "stat reveal", style: `--c:${statColors[i % 4]}` }, [b, el("span", { text: s.label })]));
+    // A stat is either a number that counts up (n) or fixed text such as "6 days → 1 min".
+    const b = el("b", { text: s.text || (s.prefix || "") + s.n + (s.suffix || "") });
+    if (s.n != null) { b.dataset.n = s.n; b.dataset.prefix = s.prefix || ""; b.dataset.suffix = s.suffix || ""; }
+    $("impact").append(el("div", { class: "stat reveal" + (s.wide ? " wide" : ""), style: `--c:${statColors[i % statColors.length]}` }, [b, el("span", { text: s.label })]));
   });
   function countUp(b) {
     const end = Number(b.dataset.n);

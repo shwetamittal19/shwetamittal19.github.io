@@ -631,7 +631,8 @@ const WORK = [
 /* Four numbers for the top of the page. */
 const IMPACT = [
   { n: 20, suffix: "M+", label: "people use a security feature I built from scratch at Ivanti" },
-  { n: 1, prefix: "$", suffix: "M", label: "enterprise contract won with a solution I scoped with Apple’s engineers" },
+  { text: "6 days → 1 min", wide: true, label: "incident response time after remote kill switches across 5M+ devices" },
+  { n: 39, suffix: "%", label: "higher adoption than classic VPN after I simplified Zero Trust sign-in" },
   { n: 50, suffix: "+", label: "customer interviews behind one product roadmap at ShopSight" },
   { n: 35, suffix: "%", label: "more sessions per user after my analytics and A/B tests" }
 ];
