@@ -647,7 +647,7 @@ const JOURNEY = [
     bullets: [
       "Built a device-compliance feature from zero to one. It now serves 20M+ end users at 10K+ enterprise customers.",
       "Simplified Zero Trust sign-in on iOS and Android from customer feedback: 39% higher adoption than classic VPN for 500K+ mobile users.",
-      "Won a $1M enterprise contract by scoping a secure tunneling solution with Apple’s network engineers.",
+      "Unblocked an iOS 17 beta vulnerability that hit every VPN. When our Apple support tickets stalled, I used WWDC to reach Apple’s network engineers, then built the fix with our lead architect. It helped win $1M in revenue.",
       "Cut incident response from about 6 days to 1 minute with remote kill switches across 5M+ devices.",
       "Earned Ivanti’s No. 1 Spot Award for customer focus."
     ] },
