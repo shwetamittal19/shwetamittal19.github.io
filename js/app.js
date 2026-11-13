@@ -154,6 +154,7 @@
   $("mission-photo").alt = MISSION.photo.alt;
   $("mission-label").textContent = MISSION.label;
   $("mission-quote").append(MISSION.before, el("span", { class: "warm", text: MISSION.highlight }), MISSION.after);
+  if (MISSION.link) $("mission-quote").parentNode.append(el("a", { class: "btn small mission-link", href: MISSION.link.url, text: MISSION.link.label + " →" }));
   const alt = el("b", { text: MISSION.stat.n + MISSION.stat.suffix });
   alt.dataset.n = MISSION.stat.n; alt.dataset.prefix = ""; alt.dataset.suffix = MISSION.stat.suffix;
   $("trail").append(el("div", { class: "altitude reveal" }, [ico("peak"), alt, el("span", { text: MISSION.stat.label })]));

@@ -697,6 +697,7 @@ const MISSION = {
   after: ", and be courageous.",
   photo: { src: "img/trek/summit.jpg", alt: "Shweta standing on a snow slope high in the Himalayas, with a snow-covered mountain range behind her" },
   stat: { n: 14, suffix: ",000 ft", label: "Himalayas trek, summer 2026" },
+  link: { label: "Read the trek story", url: "https://shwetamittal19.github.io/sar-pass/" },
   trail: [
     { src: "img/trek/ridge.jpg", alt: "Trekkers resting in a line on a steep snow ridge", pos: "50% 55%" },
     { src: "img/trek/sunset.jpg", alt: "Walking down a snow slope towards an orange sunset over the mountains", pos: "50% 70%" },
